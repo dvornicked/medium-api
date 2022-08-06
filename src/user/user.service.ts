@@ -81,7 +81,6 @@ export class UserService {
 		if (!userToUpdate)
 			throw new HttpException('User not found', HttpStatus.NOT_FOUND)
 		Object.assign(userToUpdate, userUpdateDto)
-		console.log(userUpdateDto, userToUpdate)
 		return await this.userRepository.save(userToUpdate)
 	}
 }
